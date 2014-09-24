@@ -1,0 +1,24 @@
+import java.util.*;
+public class interpolationSearch {
+	public static void main(String [] args){
+		int a[]={38,48,65,76,97};
+		 System.out.println(InterpolationSearch(a,0,a.length-1,76)+" "+Arrays.toString(a));
+	}
+	
+	public static int InterpolationSearch(int [] array,int start0,int end0,int target){
+		int start=start0;
+		int end=end0;
+		int mid;
+		while(array[start]<=target&&array[end]>=target&&end>=start){
+			mid=array[start]+(target-array[start])*(end-start)/(array[end]-array[start]);
+			if(target<array[mid]){
+				return mid;
+			}else if(target<array[mid]){
+				end=mid-1;
+			}else{
+				start=mid+1;
+			}
+		}
+		return -1;
+	}
+}

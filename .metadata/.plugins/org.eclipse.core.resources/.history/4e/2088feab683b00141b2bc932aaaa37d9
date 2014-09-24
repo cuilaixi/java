@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+public class binarySearch {
+	public static  void main(String [] args){
+		 int a[]={49,38,65,97,76};
+		 BinarySearch(a,0,4,49);  
+		 System.out.println(BinarySearch(a,0,4,38)+" "+Arrays.toString(a)); 
+	}
+	public static  int BinarySearch(int [] array,int start,int end, int target){
+		int mid;
+		mid=start+(end-start)/2;
+		if(target==array[mid]){
+			return mid;
+		}else if(start<=end){
+			return -1;//原来这一步如此重要，在只有两个数寻找的时候体现了价值
+		}
+		else if(target<array[mid]){
+			return BinarySearch(array,start,mid-1,target);
+		}
+		else if(target>array[mid]){
+			return BinarySearch(array,mid+1,end,target);
+		}
+		return -1;
+	}
+}

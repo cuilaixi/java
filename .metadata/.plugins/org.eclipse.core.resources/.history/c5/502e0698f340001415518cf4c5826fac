@@ -1,0 +1,12 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
+public class ShowBorderLayout extends JFrame{
+	public ShowBorderLayout(){
+		setLayout(new BorderLayout(5,10));
+		
+		add(new JButton("East"),BorderLayout.EAST);
+		add(new JButton("South"),BorderLayout.SOUTH);
+		add(new JButton("West"),BorderLayout.WEST);
+	}
+}

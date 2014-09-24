@@ -1,0 +1,17 @@
+import java.util.*;
+public class interpolationSearch {
+	public static void main(String [] args){
+		//ÊäÈëÊı×é
+		Scanner scanner=new Scanner(System.in);		
+		ArrayList<Integer> list=new ArrayList<Integer>();
+		while(scanner.hasNextInt()){
+			int n=scanner.nextInt();	
+			list.add(n);
+		}
+	   int l=list.size();
+	   int a[]=new int[l];
+	   for(int i=0;i<list.size();i++){
+		   a[i]=(int)list.get(i);
+	   }
+	}
+}

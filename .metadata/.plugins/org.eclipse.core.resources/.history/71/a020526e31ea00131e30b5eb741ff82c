@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+import javax.swing.*;
+public class prime {
+	public static void main(String[] args){
+		int n=128;
+		ArrayList List = new ArrayList();
+		for(int j=2;j<=n;j++){
+			if(isPrime(j)==true){
+				//System.out.print(" "+j+" ");
+				List.add(j);
+			}
+		}
+		for(int i=0;i<List.size();i++){
+			System.out.print(" "+List.get(i)+" ");
+			
+		}
+		System.out.println(" are Primes ");
+		for(int i=0;i<List.size();i++){
+			int j=(int) List.get(i);//开始我写的 int =List.get(i)始终不对
+			while(isPrime(n)!=true){
+				if(n%j!=0){
+					break;
+				}
+				n=n/j;	
+				System.out.println(" "+j+" ");
+				if (isPrime(n)==true){
+					System.out.println(" "+n+" ");
+					break;}
+			}
+		}
+		
+	}
+
+
+	public static boolean isPrime(int n){
+		int i;
+		for(i=2;i<=Math.sqrt(n);i++){//求从2到n为止这么多数字中有哪些是 质数
+				if((n%i)==0){
+					return false;
+				}	
+		}
+			return true;
+		}
+		
+}

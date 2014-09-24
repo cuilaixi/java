@@ -1,0 +1,33 @@
+package sim.javaclass.lesson5;
+
+public class Test {
+	public static void main(String[] args) {
+		
+		Student stu1 = new Student("peter");
+		stu1.setClassstate(Student.GRADETWO);
+		stu1.setAddress("whu");
+		System.out.println(stu1.toString());
+		
+		Person per1 = new Person("张三");
+		per1.setPhonenum(1238274891);
+		per1.setEmail("289089@yahoo.com");
+		per1.setAddress("whuhan university");
+		System.out.println(per1.toString());
+		
+		Student stu2 = new Student("小明");
+		stu2.setClassstate(Student.GRADETWO);
+		
+		Faculty fac1 = new Faculty("王五");
+		fac1.setRank(5);
+		fac1.setOfficetime("two years");
+		
+		System.out.println(fac1.toString());
+		
+		Employee emp1 = new Employee("大明");
+		emp1.setOfficenum("20103024800023");
+		emp1.setSalary(9090.90);
+		MyDate startDate = new MyDate(2000,10,1);
+		emp1.setStartDate(startDate);	
+		System.out.println(emp1.toString());
+	}
+}

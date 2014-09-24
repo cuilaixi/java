@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+public class binarySearch {
+	public static  void main(String [] args){
+		 int a[]={49,38,65,97,76,13,27,49,78,34,12,64,5,4,62,99,98,54,101,56,17,18,23,34,15,35,25,53,51};
+		 BinarySearch(a,0,28,28);  
+		 System.out.println(Arrays.toString(a)); 
+	}
+	public static  int BinarySearch(int [] array,int start,int end, int target){
+		int low=start,high=end;
+		int mid=(high-low)/2;
+//		System.out.println(mid);
+		if(target==array[mid]){
+			return mid;
+		}
+		else if(target<array[mid]){
+			return BinarySearch(array,((mid-1)-low+1),target);
+		}
+		else if(target>array[mid]){
+			return BinarySearch(array,(high-mid+1),target);
+		}
+		return -1;
+	}
+}

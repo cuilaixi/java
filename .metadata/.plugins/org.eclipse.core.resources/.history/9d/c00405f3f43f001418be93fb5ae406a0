@@ -1,0 +1,8 @@
+import java.util.*;
+public class interpolationSearch {
+	public static void main(String [] args){
+		int a[]={38,48,65,76,97};
+		 System.out.println(3/2);
+		 System.out.println(BinarySearch(a,0,a.length-1,67)+" "+Arrays.toString(a));
+	}
+}
